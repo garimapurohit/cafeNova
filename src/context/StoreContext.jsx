@@ -1,10 +1,29 @@
 import { createContext, useEffect, useState } from "react";
-import { food_list } from "../assets/assets";
-
+import { foodImageMap } from "../assets/assets";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
+  const [food_list, setFoodList] = useState([]);
+  useEffect(() => {
+  const fetchFoods = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/foods");
+      const data = await response.json();
+
+      const foodsWithImages = data.map((food) => ({
+        ...food,
+        image: foodImageMap[food.image],
+      }));
+
+      setFoodList(foodsWithImages);
+    } catch (error) {
+      console.error("Failed to fetch foods:", error);
+    }
+  };
+
+  fetchFoods();
+}, []);
 
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {

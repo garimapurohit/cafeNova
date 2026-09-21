@@ -281,3 +281,29 @@ export const food_list = [
         category: "Noodles"
     }
 ]
+export const foodImageMap = {
+    "peri.png": peri,
+    "classic.png": classic,
+    "fries3.png": fries3,
+    "fries4.png": fries4,
+    "espresso.png": Espresso,
+    "icedcoffee.png": IcedCoffee,
+    "Cappuccino.png": cappuccino,
+    "coffeeimage.png": coffeeimage,
+    "redSauce.png": redSauce,
+    "whitesauce.png": whitesauce,
+    "pinkSauce.png": pinkSauce,
+    "pestoPasta.png": pestoPasta,
+    "food_13.png": food_13,
+    "food_14.png": food_14,
+    "food_15.png": food_15,
+    "food_16.png": food_16,
+    "food_17.png": food_17,
+    "food_18.png": food_18,
+    "food_19.png": food_19,
+    "food_20.png": food_20,
+    "food_29.png": food_29,
+    "food_30.png": food_30,
+    "food_31.png": food_31,
+    "food_32.png": food_32
+};
